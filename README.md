@@ -22,7 +22,7 @@
 
 ```bash
 git clone https://github.com/valirijamgeladze/Course_Recommend.git
-cd Double_R_IT_Project
+cd Course_Recommend
 
 sudo docker-compose up --build
 ```
