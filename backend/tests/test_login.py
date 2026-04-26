@@ -30,8 +30,7 @@ def test_login_success(client):
 
 def test_login_invalid_password(client):
     mock_user = MagicMock()
-    mock_user.check_password.return_value = False
-    
+    mock_user.check_password.return_value = False    
     with patch('backend.handlers.login.User') as mock_user_model:
         mock_user_model.query.filter_by.return_value.first.return_value = mock_user
         response = client.post('/login/', json={
